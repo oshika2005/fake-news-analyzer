@@ -22,8 +22,8 @@ This tool gives credibility signals only. It can be wrong. Always verify
 important claims with trusted sources.
 
 ## Team
-- [OSHIKA JAT]: backend, Gemma integration
-- [HARSH MUKATI]: frontend
+- OSHIKA JAT: backend, Gemma integration
+- HARSH MUKATI: frontend
 
 ## AI tools used (disclosure)
 - Claude (Anthropic) was used for guidance and helped draft the initial backend code
