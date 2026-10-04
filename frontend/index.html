@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Fake News Credibility Analyzer</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="container">
+    <header>
+      <h1>Fake News Credibility Analyzer</h1>
+      <p class="subtitle">Paste a forward or news text (English, हिंदी or Hinglish). We show credibility signals, not a final verdict.</p>
+    </header>
+
+    <section class="card">
+      <label for="input">Message</label>
+      <textarea id="input" rows="7" placeholder="Paste the message here..."></textarea>
+
+      <div class="samples">
+        <span>Try a sample:</span>
+        <button class="chip" data-sample="en">English</button>
+        <button class="chip" data-sample="hi">हिंदी</button>
+        <button class="chip" data-sample="hing">Hinglish</button>
+        <button class="chip" data-sample="ok">Normal notice</button>
+      </div>
+
+      <button id="analyzeBtn" class="primary">Analyze</button>
+      <p id="error" class="error" hidden></p>
+    </section>
+
+    <section id="result" class="card" hidden>
+      <div class="result-head">
+        <div>
+          <div class="muted">Credibility score</div>
+          <div id="scoreText" class="score">--</div>
+        </div>
+        <span id="label" class="badge">--</span>
+      </div>
+      <div class="bar"><div id="barFill" class="bar-fill"></div></div>
+
+      <h3>Claims found</h3>
+      <ul id="claims" class="claims"></ul>
+
+      <h3>Red flags</h3>
+      <div id="flags" class="flags"></div>
+
+      <h3>Why</h3>
+      <p id="explanation"></p>
+
+      <p class="muted small" id="modelUsed"></p>
+    </section>
+
+    <footer class="muted small">
+      This tool gives credibility signals only and can be wrong. Verify important claims with trusted sources.
+    </footer>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
